@@ -1,4 +1,4 @@
-﻿<script setup>
+<script setup>
 import { reactive, ref } from "vue";
 import { RouterLink, useRouter } from "vue-router";
 import { Eye, EyeOff, LoaderCircle, Lock, Mail } from "lucide-vue-next";
@@ -90,12 +90,12 @@ const handleSubmit = async () => {
             :type="showPassword ? 'text' : 'password'"
             autocomplete="current-password"
             placeholder="Masukkan kata sandi"
-            class="w-full rounded-xl border border-slate-300 bg-white py-2.5 pl-10 pr-10 text-sm outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
+            class="w-full rounded-xl border border-slate-300 bg-white py-2.5 pl-10 pr-12 text-sm outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
           />
           <button
             type="button"
             data-testid="toggle-password"
-            class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+            class="absolute right-1 top-1/2 flex size-10 -translate-y-1/2 items-center justify-center text-slate-400 hover:text-slate-600"
             :aria-label="showPassword ? 'Sembunyikan kata sandi' : 'Tampilkan kata sandi'"
             @click="showPassword = !showPassword"
           >

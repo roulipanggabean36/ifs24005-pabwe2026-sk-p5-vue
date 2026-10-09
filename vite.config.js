@@ -10,6 +10,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [vue(), tailwindcss()],
+    build: { sourcemap: true, target: "esnext" },
     server: { port },
     preview: { port },
     define: {
