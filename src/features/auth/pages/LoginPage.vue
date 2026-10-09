@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import { reactive, ref } from "vue";
 import { RouterLink, useRouter } from "vue-router";
 import { Eye, EyeOff, LoaderCircle, Lock, Mail } from "lucide-vue-next";
@@ -61,11 +61,11 @@ const handleSubmit = async () => {
       @submit.prevent="handleSubmit"
     >
       <div>
-        <label for="email" class="mb-1.5 block text-sm font-semibold text-slate-700">Email</label>
+        <label for="login-email-input" class="mb-1.5 block text-sm font-semibold text-slate-700">Email</label>
         <div class="relative">
           <Mail class="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-slate-400" />
           <input
-            id="email"
+            id="login-email-input"
             v-model="email"
             data-testid="email-input"
             type="email"
@@ -80,11 +80,11 @@ const handleSubmit = async () => {
       </div>
 
       <div>
-        <label for="password" class="mb-1.5 block text-sm font-semibold text-slate-700">Kata sandi</label>
+        <label for="login-password-input" class="mb-1.5 block text-sm font-semibold text-slate-700">Kata sandi</label>
         <div class="relative">
           <Lock class="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-slate-400" />
           <input
-            id="password"
+            id="login-password-input"
             v-model="password"
             data-testid="password-input"
             :type="showPassword ? 'text' : 'password'"
@@ -110,7 +110,7 @@ const handleSubmit = async () => {
 
       <button
         type="submit"
-        data-testid="submit-button"
+        id="login-submit-button" data-testid="submit-button"
         :disabled="authStore.isAuthLogin"
         class="flex w-full items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-60"
       >
