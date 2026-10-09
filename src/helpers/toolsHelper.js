@@ -1,4 +1,5 @@
-import Swal from "sweetalert2";
+const fireSwal = (options) =>
+  import("sweetalert2").then((module) => module.default.fire(options));
 
 const BASE_OPTIONS = {
   confirmButtonColor: "#4f46e5",
@@ -6,7 +7,7 @@ const BASE_OPTIONS = {
 };
 
 export function showSuccessDialog(message) {
-  return Swal.fire({
+  return fireSwal({
     ...BASE_OPTIONS,
     icon: "success",
     title: "Berhasil",
@@ -17,7 +18,7 @@ export function showSuccessDialog(message) {
 }
 
 export function showErrorDialog(message) {
-  return Swal.fire({
+  return fireSwal({
     ...BASE_OPTIONS,
     icon: "error",
     title: "Gagal",
@@ -26,7 +27,7 @@ export function showErrorDialog(message) {
 }
 
 export function showWarningDialog(message) {
-  return Swal.fire({
+  return fireSwal({
     ...BASE_OPTIONS,
     icon: "warning",
     title: "Perhatian",
@@ -39,7 +40,7 @@ export function showWarningDialog(message) {
  * @returns {Promise<boolean>} true jika pengguna menekan "Ya"
  */
 export async function showConfirmDialog(message) {
-  const result = await Swal.fire({
+  const result = await fireSwal({
     ...BASE_OPTIONS,
     icon: "question",
     title: "Konfirmasi",
