@@ -119,7 +119,7 @@ onMounted(() => {
 
       <select
         v-model="status"
-        data-testid="status-select"
+        data-testid="status-select" aria-label="Filter status lelang"
         class="rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
       >
         <option value="all">Semua status</option>

@@ -173,19 +173,19 @@ onMounted(() => {
 
         <dl class="grid gap-4 sm:grid-cols-3">
           <div class="rounded-xl bg-slate-50 p-4">
-            <dt class="text-xs font-semibold uppercase text-slate-400">Harga awal</dt>
+            <dt class="text-xs font-semibold uppercase text-slate-600">Harga awal</dt>
             <dd data-testid="start-bid" class="mt-1 font-bold text-slate-900">
               {{ formatRupiah(aucation.start_bid) }}
             </dd>
           </div>
           <div class="rounded-xl bg-slate-50 p-4">
-            <dt class="text-xs font-semibold uppercase text-slate-400">Tawaran tertinggi</dt>
+            <dt class="text-xs font-semibold uppercase text-slate-600">Tawaran tertinggi</dt>
             <dd data-testid="highest-bid" class="mt-1 font-bold text-indigo-600">
               {{ highestBid > 0 ? formatRupiah(highestBid) : "Belum ada tawaran" }}
             </dd>
           </div>
           <div class="rounded-xl bg-slate-50 p-4">
-            <dt class="text-xs font-semibold uppercase text-slate-400">Batas waktu</dt>
+            <dt class="text-xs font-semibold uppercase text-slate-600">Batas waktu</dt>
             <dd data-testid="closed-at" class="mt-1 font-bold text-slate-900">
               {{ formatDate(normalizeDateTime(aucation.closed_at)) }}
             </dd>

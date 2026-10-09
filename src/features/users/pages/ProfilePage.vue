@@ -132,7 +132,7 @@ const handlePhotoChange = async (event) => {
           <p data-testid="profile-email" class="truncate text-sm text-slate-500">
             {{ usersStore.profile.email }}
           </p>
-          <p data-testid="profile-joined" class="mt-1 text-xs text-slate-400">
+          <p data-testid="profile-joined" class="mt-1 text-xs text-slate-600">
             Bergabung sejak {{ formatDate(usersStore.profile.created_at) }}
           </p>
         </div>

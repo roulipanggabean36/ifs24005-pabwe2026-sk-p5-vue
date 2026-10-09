@@ -43,9 +43,9 @@ const coverUrl = computed(() => resolvePhotoUrl(props.aucation.cover));
     </div>
 
     <div class="flex flex-1 flex-col gap-3 p-4">
-      <h3 data-testid="card-title" class="line-clamp-2 font-bold text-slate-900">
+      <h2 data-testid="card-title" class="line-clamp-2 font-bold text-slate-900">
         {{ aucation.title }}
-      </h3>
+      </h2>
 
       <div class="flex items-center gap-2 text-sm text-slate-500">
         <UserAvatar
@@ -66,7 +66,7 @@ const coverUrl = computed(() => resolvePhotoUrl(props.aucation.cover));
         <p data-testid="card-bids" class="text-slate-500">
           {{ aucation.bids.length }} penawaran
         </p>
-        <p class="flex items-center gap-1.5 text-xs text-slate-400">
+        <p class="flex items-center gap-1.5 text-xs text-slate-600">
           <CalendarClock class="size-3.5" />
           <span data-testid="card-closed-at">
             {{ formatDate(normalizeDateTime(aucation.closed_at)) }}
