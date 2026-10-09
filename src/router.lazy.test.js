@@ -1,4 +1,4 @@
-﻿import { routes } from "./router";
+import { routes } from "./router";
 
 describe("lazy route", () => {
   it("memuat semua komponen route yang di-lazy-load", async () => {
@@ -10,7 +10,7 @@ describe("lazy route", () => {
       });
     walk(routes);
 
-    expect(loaders).toHaveLength(8);
+    expect(loaders).toHaveLength(6);
     const modules = await Promise.all(loaders.map((load) => load()));
     modules.forEach((m) => expect(m.default).toBeDefined());
   });

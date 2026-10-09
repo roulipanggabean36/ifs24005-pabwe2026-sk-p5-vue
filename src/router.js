@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { getAccessToken } from "./helpers/apiHelper";
 import AuthLayout from "./features/auth/layouts/AuthLayout.vue";
+import LoginPage from "./features/auth/pages/LoginPage.vue";
+import RegisterPage from "./features/auth/pages/RegisterPage.vue";
 
 export const isLoggedIn = () => Boolean(getAccessToken());
 
@@ -10,8 +12,8 @@ export const routes = [
     component: AuthLayout,
     meta: { guestOnly: true },
     children: [
-      { path: "login", component: () => import("./features/auth/pages/LoginPage.vue") },
-      { path: "register", component: () => import("./features/auth/pages/RegisterPage.vue") },
+      { path: "login", component: LoginPage },
+      { path: "register", component: RegisterPage },
     ],
   },
   {
