@@ -88,7 +88,6 @@ const handleSubmit = async () => {
             v-model="password"
             data-testid="password-input"
             :type="showPassword ? 'text' : 'password'"
-            autocomplete="current-password"
             placeholder="Masukkan kata sandi"
             class="w-full rounded-xl border border-slate-300 bg-white py-2.5 pl-10 pr-12 text-sm outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
           />
